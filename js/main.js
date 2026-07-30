@@ -50,6 +50,35 @@ document.addEventListener('DOMContentLoaded', () => {
     tabs.addEventListener('touchmove', (e) => dragMove(e.touches[0].clientX), { passive: true });
     tabs.addEventListener('touchend', dragEnd);
 
+    const plantasPlan = document.getElementById('plantasPlan');
+    const img1 = document.getElementById('plantasImg1');
+    const img2 = document.getElementById('plantasImg2');
+    const areaEl = document.getElementById('plantasArea');
+    const floorEl = document.getElementById('plantasFloor');
+    const unitsEl = document.getElementById('plantasUnits');
+
+    const renderPlanta = (tab) => {
+      const images = (tab.dataset.images || '').split(',').filter(Boolean);
+      img1.src = images[0] || '';
+      img1.alt = `Planta baixa apartamento ${tab.dataset.area || ''}`;
+      if (images[1]) {
+        img2.src = images[1];
+        img2.hidden = false;
+        plantasPlan.classList.add('plantas__plan--double');
+      } else {
+        img2.hidden = true;
+        plantasPlan.classList.remove('plantas__plan--double');
+      }
+      areaEl.textContent = tab.dataset.area || '';
+      floorEl.textContent = tab.dataset.floor || '';
+      if (tab.dataset.units) {
+        unitsEl.innerHTML = `Unidades:<br>${tab.dataset.units}`;
+        unitsEl.hidden = false;
+      } else {
+        unitsEl.hidden = true;
+      }
+    };
+
     tabs.querySelectorAll('.plantas__tab').forEach((tab) => {
       tab.addEventListener('click', (e) => {
         if (wasDragged) {
@@ -58,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         tabs.querySelector('.plantas__tab--active')?.classList.remove('plantas__tab--active');
         tab.classList.add('plantas__tab--active');
+        renderPlanta(tab);
       });
     });
   }
@@ -104,5 +134,30 @@ document.addEventListener('DOMContentLoaded', () => {
     sideNext.addEventListener('click', () => estruturaNextBtn.click());
 
     renderSlide();
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    const openLightbox = () => {
+      lightboxImg.src = mainImg.src;
+      lightboxImg.alt = mainImg.alt;
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      document.body.style.overflow = '';
+    };
+
+    mainImg.addEventListener('click', openLightbox);
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
   }
 });

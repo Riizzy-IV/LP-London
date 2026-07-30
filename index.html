@@ -22,9 +22,9 @@
         <li><a href="#plantas" class="nav__link">Plantas</a></li>
         <li><a href="#ficha-tecnica" class="nav__link">Ficha Técnica</a></li>
       </ul>
-      <a href="#contato" class="nav__contact">
+      <a href="tel:+5511921799292" class="nav__contact">
         <img src="assets/icons/telefone-circular.svg" alt="">
-        <span>Entre em contato</span>
+        <span>(11) 92179-9292</span>
       </a>
     </nav>
   </header>
@@ -40,7 +40,7 @@
           <img src="assets/icons/marker.svg" alt="">
           <p>10 minutos de Capivari</p>
         </div>
-        <a href="#contato" class="btn btn--primary">
+        <a href="https://wa.me/5511921799292" target="_blank" rel="noopener" class="btn btn--primary">
           <img src="assets/icons/arrow-right.svg" alt="">
           <span>Quero conhecer o empreendimento</span>
         </a>
@@ -201,19 +201,19 @@
           <img src="assets/img/prev.svg" alt="">
         </button>
         <div class="plantas__tabs" id="plantasTabs">
-          <button class="plantas__tab plantas__tab--active">71,40 m²</button>
-          <button class="plantas__tab">66,85 m²</button>
-          <button class="plantas__tab">73,50 m²</button>
-          <button class="plantas__tab">61,60 m²</button>
-          <button class="plantas__tab">68,90 m²</button>
-          <button class="plantas__tab">73,75 m²</button>
-          <button class="plantas__tab">68,20 m²</button>
-          <button class="plantas__tab">74,84 m²</button>
-          <button class="plantas__tab">88,60 m²</button>
-          <button class="plantas__tab">119,85 m²</button>
-          <button class="plantas__tab">80,05 m²</button>
-          <button class="plantas__tab">62,72 m²</button>
-          <button class="plantas__tab">75,44 m²</button>
+          <button class="plantas__tab plantas__tab--active" data-area="71,40 m²" data-floor="1º pavimento" data-units="1, 2, 3, 4, 8 e 9" data-images="assets/img/Plantas/71-40.png">71,40 m²</button>
+          <button class="plantas__tab" data-area="66,85 m²" data-floor="1º pavimento" data-units="5" data-images="assets/img/Plantas/66-85.png">66,85 m²</button>
+          <button class="plantas__tab" data-area="61,60 m²" data-floor="1º pavimento" data-units="7" data-images="assets/img/Plantas/61-60.png">61,60 m²</button>
+          <button class="plantas__tab" data-area="68,90 m²" data-floor="1º pavimento" data-units="10" data-images="assets/img/Plantas/68-90.png">68,90 m²</button>
+          <button class="plantas__tab" data-area="73,75 m²" data-floor="1º pavimento" data-units="11" data-images="assets/img/Plantas/73-75.png">73,75 m²</button>
+          <button class="plantas__tab" data-area="68,20 m²" data-floor="2º pavimento + sótão" data-units="12 a 18, 20 a 25 e 29 a 36" data-images="assets/img/Plantas/68-20-2pav.png,assets/img/Plantas/68-20-sotao.png">68,20 m²</button>
+          <button class="plantas__tab" data-area="74,84 m²" data-floor="2º pavimento + sótão" data-units="19" data-images="assets/img/Plantas/74-84-2pav.png,assets/img/Plantas/74-84-sotao.png">74,84 m²</button>
+          <button class="plantas__tab" data-area="94,74 m²" data-floor="2º pavimento + sótão" data-units="26" data-images="assets/img/Plantas/94-74-2pav.png,assets/img/Plantas/94-74-sotao.png">94,74 m²</button>
+          <button class="plantas__tab" data-area="88,60 m²" data-floor="2º pavimento + sótão" data-units="27" data-images="assets/img/Plantas/88-60-2pav.png,assets/img/Plantas/88-60-sotao.png">88,60 m²</button>
+          <button class="plantas__tab" data-area="119,85 m²" data-floor="2º pavimento + sótão" data-units="28" data-images="assets/img/Plantas/119-85-2pav.png,assets/img/Plantas/119-85-sotao.png">119,85 m²</button>
+          <button class="plantas__tab" data-area="80,05 m²" data-floor="Subsolo" data-units="37" data-images="assets/img/Plantas/80-05.png">80,05 m²</button>
+          <button class="plantas__tab" data-area="62,72 m²" data-floor="Subsolo" data-units="38, 39, 40 e 41" data-images="assets/img/Plantas/62-72.png">62,72 m²</button>
+          <button class="plantas__tab" data-area="75,44 m²" data-floor="Subsolo" data-units="42" data-images="assets/img/Plantas/75-44.png">75,44 m²</button>
         </div>
         <button class="plantas__tabs-arrow plantas__tabs-arrow--next" aria-label="Ver mais plantas">
           <img src="assets/img/next.svg" alt="">
@@ -221,13 +221,14 @@
       </div>
 
       <div class="plantas__panel">
-        <div class="plantas__plan">
-          <img src="assets/img/floorplan.png" alt="Planta baixa apartamento 71,40 m²">
+        <div class="plantas__plan" id="plantasPlan">
+          <img src="assets/img/Plantas/71-40.png" alt="Planta baixa apartamento 71,40 m²" id="plantasImg1">
+          <img src="assets/img/Plantas/71-40.png" alt="" id="plantasImg2" hidden>
         </div>
         <div class="plantas__info">
-          <span class="plantas__info-area">71,40 m²</span>
-          <span class="plantas__info-heading">1º pavimento</span>
-          <span class="plantas__info-units">Unidades:<br>1, 2, 3, 4, 8 e 9</span>
+          <span class="plantas__info-area" id="plantasArea">71,40 m²</span>
+          <span class="plantas__info-heading" id="plantasFloor">1º pavimento</span>
+          <span class="plantas__info-units" id="plantasUnits">Unidades:<br>1, 2, 3, 4, 8 e 9</span>
         </div>
       </div>
 
@@ -267,11 +268,11 @@
       </div>
 
       <div class="plantas__actions">
-        <a href="#contato" class="btn btn--outline">
+        <a href="https://wa.me/5511921799292" target="_blank" rel="noopener" class="btn btn--outline">
           <img src="assets/icons/headset.svg" alt="">
           <span>Falar com um especialista</span>
         </a>
-        <a href="#contato" class="btn btn--primary">
+        <a href="https://wa.me/5511921799292" target="_blank" rel="noopener" class="btn btn--primary">
           <img src="assets/icons/calendar.svg" alt="">
           <span>Quero agendar minha visita</span>
         </a>
@@ -306,6 +307,11 @@
         </button>
       </div>
       <img src="assets/img/estrutura-next.png" alt="" class="estrutura__side estrutura__side--next" id="estruturaSideNext">
+    </div>
+
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">&times;</button>
+      <img src="" alt="" id="lightboxImg">
     </div>
   </section>
 
@@ -395,10 +401,10 @@
 
         <hr class="footer__line">
 
-        <div class="footer__contact">
+        <a href="https://wa.me/5511921799292" target="_blank" rel="noopener" class="footer__contact">
           <img src="assets/icons/whatsapp.svg" alt="">
           <p>WhatsApp: +55 (11) 92179-9292</p>
-        </div>
+        </a>
 
         <hr class="footer__line">
 

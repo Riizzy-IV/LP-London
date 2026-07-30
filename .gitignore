@@ -1,6 +1,11 @@
 # Imagens brutas de origem (já convertidas para AVIF em assets/img/carrossel)
 assets/img/imgs\ carro/
 
+# Pastas originais de plantas (já achatadas em assets/img/Plantas/*.png)
+assets/img/Plantas/1º\ pavimento/
+assets/img/Plantas/2\ pavimento/
+assets/img/Plantas/Subsolo/
+
 # Sistema
 .DS_Store
 Thumbs.db
