@@ -1,0 +1,6 @@
+# Imagens brutas de origem (já convertidas para AVIF em assets/img/carrossel)
+assets/img/imgs\ carro/
+
+# Sistema
+.DS_Store
+Thumbs.db
