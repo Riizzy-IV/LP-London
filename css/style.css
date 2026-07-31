@@ -453,36 +453,6 @@ ul {
   border-radius: inherit;
 }
 
-.diferenciais__arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.diferenciais__arrow img {
-  width: 16px;
-  height: 16px;
-}
-
-.diferenciais__arrow--prev {
-  left: 16px;
-}
-
-.diferenciais__arrow--next {
-  right: 16px;
-  transform: translateY(-50%) rotate(180deg);
-}
-
 /* ==========================================================================
    Localização
    ========================================================================== */
@@ -1292,6 +1262,16 @@ ul {
    Responsivo
    ========================================================================== */
 @media (max-width: 900px) {
+  .scroll-divider-wrap--hero .scroll-divider {
+    top: 369px;
+    width: 180%;
+  }
+
+  .scroll-divider-wrap--localizacao {
+    display: none;
+  }
+
+
   .header {
     padding-inline: 0;
   }
@@ -1462,11 +1442,11 @@ ul {
   }
 
   .plantas__plan {
-    padding-inline: 20px;
+    padding: 32px 32px;
   }
 
   .plantas__plan img {
-    max-width: 360px;
+    max-width: 320px;
   }
 
   .plantas__heading h2 {
