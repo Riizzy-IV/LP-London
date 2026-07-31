@@ -1025,7 +1025,7 @@ ul {
   padding: 40px 48px;
   max-width: 950px;
   margin-inline: auto;
-  margin-top: -60px;
+  margin-top: -90px;
   z-index: 2;
 }
 
@@ -1225,6 +1225,17 @@ ul {
 
 .footer__social img {
   height: 22px;
+}
+
+.footer__social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.footer__social-icon:hover {
+  opacity: 0.8;
 }
 
 .footer__line {
