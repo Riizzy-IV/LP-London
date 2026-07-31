@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=28">
 </head>
 <body>
 
@@ -22,11 +22,22 @@
         <li><a href="#plantas" class="nav__link">Plantas</a></li>
         <li><a href="#ficha-tecnica" class="nav__link">Ficha Técnica</a></li>
       </ul>
-      <a href="tel:+5511921799292" class="nav__contact">
+      <a href="https://wa.me/5511921799292" target="_blank" rel="noopener" class="nav__contact">
         <img src="assets/icons/telefone-circular.svg" alt="">
-        <span>(11) 92179-9292</span>
+        <span>Entre em contato</span>
       </a>
+      <button class="nav__burger" id="navBurger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
+    <ul class="nav__mobile-list" id="navMobileList">
+      <li><a href="#diferenciais" class="nav__link">Diferenciais</a></li>
+      <li><a href="#localizacao" class="nav__link">Localização</a></li>
+      <li><a href="#plantas" class="nav__link">Plantas</a></li>
+      <li><a href="#ficha-tecnica" class="nav__link">Ficha Técnica</a></li>
+    </ul>
   </header>
 
   <section class="hero" id="hero">
@@ -419,6 +430,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>
